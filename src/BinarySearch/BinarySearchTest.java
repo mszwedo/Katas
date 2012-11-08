@@ -32,7 +32,7 @@ public class BinarySearchTest {
     @Test
     public void testDoNotFindValue()
     {
-        List<Integer> array = Arrays.asList(1,2,3,4,5,6,7);
+        List<Integer> array = Arrays.asList(1,2,3,4,5,6,7,10);
 
         assertEquals(false, BinarySearch.binarySearch(array,11));
         assertEquals(false, BinarySearch.binarySearch(array,0));

@@ -2,13 +2,7 @@ package BinarySearch;
 
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Mike
- * Date: 11/7/12
- * Time: 9:44 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class BinarySearch {
 
     //Given a sorted array find a value
@@ -18,17 +12,19 @@ public class BinarySearch {
         int half = size / 2;
         int left = 0;
         int right = size-1;
+        int halfValue = 0;
 
-        while (left < right) {
+        while (left <= right) {
 
-            int halfValue = array.get(half);
+            half = (left + right) / 2;
+            halfValue = array.get(half);
 
             if (value == halfValue)
                 return true;
             else if(value < halfValue)
-                right = half;
+                right = half - 1;
             else
-                left = half;
+                left = half + 1;
         }
 
         return false;
